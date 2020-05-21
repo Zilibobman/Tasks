@@ -27,7 +27,27 @@ namespace Task1_2
             {
                 d2 += myArr[4 - i, i];
             }
-            Console.Write("Max: {0}\tMin: {1}\t", Math.Max(d1, d2), Math.Min(d1, d2));
+            Console.Write("first diag: {0}\tsecond diag: {1}\t", d1, d2);
+            Console.WriteLine();
+            
+            int max = int.MinValue;
+            int min = int.MaxValue;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (myArr[i, j] > max)
+                    {
+                        max = myArr[i, j];
+                    }
+                    if (myArr[i, j] < min)
+                    {
+                        min = myArr[i, j];
+                    }
+                }
+            }
+            Console.Write("Max: {0}\tMin: {1}\t", max, min);
+
             Console.WriteLine();
             Console.ReadLine();
         }
