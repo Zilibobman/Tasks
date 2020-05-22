@@ -1,7 +1,0 @@
-D:\ProjectsC#\Новая папка\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
-D:\ProjectsC#\Новая папка\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
-D:\ProjectsC#\Новая папка\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
-D:\ProjectsC#\Новая папка\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
-D:\ProjectsC#\Новая папка\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
-D:\ProjectsC#\Новая папка\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
-D:\ProjectsC#\Новая папка\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
