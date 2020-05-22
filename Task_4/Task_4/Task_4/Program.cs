@@ -16,7 +16,7 @@ namespace Task_4
         {
             System.Data.DataTable dt = new System.Data.DataTable();
             dt.Clear();
-            Application app = new Application();
+            Application app = new Application();        //загружаем исходную таблицу
             Workbook workbook = app.Workbooks.Open("D:/Netology/Job/Tasks/Task_4/Task_4/ФайлСИсходнымиДанными.xls");
             var worksheet = workbook.Sheets[1];
             Range range = worksheet.UsedRange;
@@ -40,7 +40,7 @@ namespace Task_4
                 }
             }
 
-            System.Data.DataTable strucData = new System.Data.DataTable();
+            System.Data.DataTable strucData = new System.Data.DataTable();      //редактируем её для удобства
             strucData.Columns.Add("Код счёта бюджетного учёта", typeof(string));
             strucData.Columns.Add("Номер банковского (лицевого) счета", typeof(string));
             strucData.Columns.Add("Остаток средств на начало года на счёте", typeof(string));
@@ -63,7 +63,7 @@ namespace Task_4
             app.Quit();
 
 
-            XDocument xdoc = new XDocument(new XDeclaration("1.0", Encoding.GetEncoding("windows-1251").WebName, ""));
+            XDocument xdoc = new XDocument(new XDeclaration("1.0", Encoding.GetEncoding("windows-1251").WebName, ""));      //записываем в xml
             XElement RootXml = new XElement("RootXml");
 
             XElement SchemaVersion = new XElement("SchemaVersion");
@@ -188,42 +188,13 @@ namespace Task_4
                     Doc.Add(PL);
                 }
             }
-            //Form.Add(Doc);
             RootXml.Add(SchemaVersion);
             SchemaVersion.Add(Period);
             Period.Add(Source);
             Source.Add(Form);
-
-
-            /*// создаем первый элемент
-            XElement iphone6 = new XElement("phone");
-            // создаем атрибут
-            XAttribute iphoneNameAttr = new XAttribute("name", "iPhone 6");
-            XElement iphoneCompanyElem = new XElement("company", "Apple");
-            XElement iphonePriceElem = new XElement("price", "40000");
-            // добавляем атрибут и элементы в первый элемент
-            iphone6.Add(iphoneNameAttr);
-            iphone6.Add(iphoneCompanyElem);
-            iphone6.Add(iphonePriceElem);
-
-            // создаем второй элемент
-            XElement galaxys5 = new XElement("phone");
-            XAttribute galaxysNameAttr = new XAttribute("name", "Samsung Galaxy S5");
-            XElement galaxysCompanyElem = new XElement("company", "Samsung");
-            XElement galaxysPriceElem = new XElement("price", "33000");
-            galaxys5.Add(galaxysNameAttr);
-            galaxys5.Add(galaxysCompanyElem);
-            galaxys5.Add(galaxysPriceElem);
-            // создаем корневой элемент
-            XElement phones = new XElement("phones");
-            // добавляем в корневой элемент
-            phones.Add(iphone6);
-            phones.Add(galaxys5);
-            // добавляем корневой элемент в документ*/
             xdoc.Add(RootXml);
-            //сохраняем документ
 
-            xdoc.Save("ФайлРезультат.xml");
+            xdoc.Save("ФайлРезультат.xml");     //сохраняем
 
             for (int i = 0; i < sortData.Columns.Count; i++)
             {
